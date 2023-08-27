@@ -28,6 +28,7 @@ class ViewController: UIViewController {
 
     @IBAction func btnCLicked(_ sender: Any) {
         
+        
         for i in peoples {
             print(i)
         }

@@ -10,6 +10,8 @@ import Foundation
 class NetworkManager {
     static let shared = NetworkManager()
     
+    private init() {}
+    
     func getPeople(completion: @escaping (Result<SwapiPersonResults, Error>) -> Void) {
         guard let url = URL(string: "https://swapi.dev/api/people")
         else {return}
@@ -17,7 +19,6 @@ class NetworkManager {
             if let data = data {
                 do {
                     let persons = try JSONDecoder().decode(SwapiPersonResults.self, from: data)
-                    print(persons.results)
                     completion(.success(persons))
                 }
                 catch {
