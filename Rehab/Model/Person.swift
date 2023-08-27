@@ -7,6 +7,13 @@
 
 import Foundation
 
-struct Person: Codable {
-    
+struct SwapiPersonResults: Codable {
+    let results: [Person]
+}
+
+struct Person: Codable, Hashable {
+    let name: String
+    let height: String
+    let mass: String
+    let gender: String
 }
