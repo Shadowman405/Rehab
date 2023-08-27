@@ -6,13 +6,14 @@
 //
 
 import Foundation
+import UIKit
 
 class NetworkManager {
     static let shared = NetworkManager()
     
     private init() {}
     
-    func getPeople(completion: @escaping (Result<SwapiPersonResults, Error>) -> Void) {
+    func getPeople(tableView: UITableView, completion: @escaping (Result<SwapiPersonResults, Error>) -> Void) {
         guard let url = URL(string: "https://swapi.dev/api/people")
         else {return}
         URLSession.shared.dataTask(with: url) { data, response, error in
@@ -24,6 +25,9 @@ class NetworkManager {
                 catch {
                     completion(.failure(error.localizedDescription as! Error))
                 }
+            }
+            DispatchQueue.main.async {
+                tableView.reloadData()
             }
         }.resume()
     }

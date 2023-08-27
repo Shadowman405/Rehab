@@ -33,21 +33,20 @@ class PersonsTVC: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PersonCell", for: indexPath)
         let person = peoples[indexPath.row]
-        cell.textLabel?.text = "beep"
+        cell.textLabel?.text = person.name
 
         return cell
     }
     
     func fetchPersons() {
-        networkManager.getPeople { response in
+        networkManager.getPeople(tableView: tableView) { response in
             switch response{
             case .success(let peoples):
-                print(peoples)
                 self.peoples = peoples.results
+                print(self.peoples.count)
             case.failure(let error):
                 print(error)
             }
         }
-        tableView.reloadData()
     }
 }

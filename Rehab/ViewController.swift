@@ -17,7 +17,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        fetchPersons()
+        //fetchPersons()
         TVC.dataSource = self
         TVC.delegate = self
         view.addSubview(TVC)
@@ -36,17 +36,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     
-    func fetchPersons() {
-        NetworkManager.shared.getPeople { response in
-            switch response{
-            case .success(let peoples):
-                print(peoples)
-                self.peoples = peoples.results
-            case.failure(let error):
-                print(error)
-            }
-        }
-    }
+//    func fetchPersons() {
+//        NetworkManager.shared.getPeople { response in
+//            switch response{
+//            case .success(let peoples):
+//                print(peoples)
+//                self.peoples = peoples.results
+//            case.failure(let error):
+//                print(error)
+//            }
+//        }
+//    }
 
 }
 
