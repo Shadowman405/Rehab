@@ -8,7 +8,7 @@
 import UIKit
 
 class PersonsTVC: UITableViewController {
-    var peoples: [Person] = []
+    var peoples: [Person] = [Person(name: "", height: "", mass: "", gender: "")]
     let networkManager = NetworkManager.shared
 
     override func viewDidLoad() {
@@ -21,12 +21,12 @@ class PersonsTVC: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 3
+        return peoples.count
     }
 
     
@@ -48,5 +48,6 @@ class PersonsTVC: UITableViewController {
                 print(error)
             }
         }
+        tableView.reloadData()
     }
 }
