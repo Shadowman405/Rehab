@@ -38,6 +38,20 @@ class PersonsTVC: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "toPerson", sender: indexPath)
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toPerson" {
+            let vc = segue.destination as? PersonViewController
+            let indexPath = self.tableView.indexPathForSelectedRow
+            vc?.personDetailed = peoples[indexPath!.row]
+        }
+    }
+    
+    //MARK: - Funcs
     func fetchPersons() {
         networkManager.getPeople(tableView: tableView) { response in
             switch response{
