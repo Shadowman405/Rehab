@@ -13,12 +13,20 @@ class PersonViewController: UIViewController {
     @IBOutlet weak var massLbl: UILabel!
     @IBOutlet weak var genderLbl: UILabel!
     
+    var personDetailed: Person = Person(name: "", height: "", mass: "", gender: "")
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setupUI()
     }
     
+    func setupUI(){
+        nameLbl.text = personDetailed.name
+        heightLbl.text = personDetailed.height
+        massLbl.text = personDetailed.mass
+        genderLbl.text = personDetailed.gender
+    }
 
 }
