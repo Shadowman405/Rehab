@@ -8,7 +8,7 @@
 import UIKit
 
 class PersonsTVC: UITableViewController {
-    var peoples: [Person] = [Person(name: "", height: "", mass: "", gender: "")]
+    var peoples: [Person] = [Person(name: "Loading...", height: "", mass: "", gender: "")]
     let networkManager = NetworkManager.shared
 
     override func viewDidLoad() {
