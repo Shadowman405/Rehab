@@ -23,10 +23,10 @@ class PersonViewController: UIViewController {
     }
     
     func setupUI(){
-        nameLbl.text = personDetailed.name
-        heightLbl.text = personDetailed.height
-        massLbl.text = personDetailed.mass
-        genderLbl.text = personDetailed.gender
+        nameLbl.text = "Name: \(personDetailed.name)"
+        heightLbl.text = "Height: \(personDetailed.height)"
+        massLbl.text = "Mass: \(personDetailed.mass)"
+        genderLbl.text = "Gender: \(personDetailed.gender)"
     }
 
 }
