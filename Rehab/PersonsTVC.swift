@@ -20,12 +20,10 @@ class PersonsTVC: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return peoples.count
     }
 
@@ -47,7 +45,9 @@ class PersonsTVC: UITableViewController {
         if segue.identifier == "toPerson" {
             let vc = segue.destination as? PersonViewController
             let indexPath = self.tableView.indexPathForSelectedRow
-            vc?.personDetailed = peoples[indexPath!.row]
+            if let indexPath = indexPath {
+                vc?.personDetailed = peoples[indexPath.row]
+            }
         }
     }
     
