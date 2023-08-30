@@ -8,8 +8,8 @@
 import UIKit
 
 class PersonsTVC: UITableViewController {
-    var peoples: [Person] = [Person(name: "Loading...", height: "", mass: "", gender: "", hairColor: "", skinColor: "")]
     let networkManager = NetworkManager.shared
+    var peoples: [Person] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +53,8 @@ class PersonsTVC: UITableViewController {
     
     //MARK: - Funcs
     func fetchPersons() {
+        peoples = networkManager.mockPersonArray
+        
         networkManager.getPeople(tableView: tableView) { response in
             switch response{
             case .success(let peoples):

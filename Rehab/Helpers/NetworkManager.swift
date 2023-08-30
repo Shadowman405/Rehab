@@ -11,6 +11,8 @@ import UIKit
 class NetworkManager {
     static let shared = NetworkManager()
     
+    var mockPersonArray = [Person(name: "Loading...", height: "", mass: "", gender: "", hairColor: "", skinColor: "")]
+    
     private init() {}
     
     func getPeople(tableView: UITableView, completion: @escaping (Result<SwapiPersonResults, Error>) -> Void) {
