@@ -29,9 +29,9 @@ class PersonViewController: UIViewController {
         nameLbl.text = "Name: \(personDetailed.name)"
         heightLbl.text = "Height: \(personDetailed.height)"
         massLbl.text = "Mass: \(personDetailed.mass)"
-        genderLbl.text = "Gender: \(personDetailed.gender)"
-        skinColorLbl.text = "Skin color: \(personDetailed.skinColor)"
-        hairColorLbl.text = "Hair color: \(personDetailed.hairColor)"
+        genderLbl.text = "Gender: " + personDetailed.gender.capitalized
+        skinColorLbl.text = "Skin color: " + personDetailed.skinColor.capitalized
+        hairColorLbl.text = "Hair color: " + personDetailed.hairColor.capitalized
     }
 
 }
