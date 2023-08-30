@@ -68,6 +68,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hair" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXj-ae-2Fj">
+                                <rect key="frame" x="112" y="375" width="169" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Skin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iln-lU-BFG">
+                                <rect key="frame" x="113" y="425" width="169" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Height" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibn-V6-487">
                                 <rect key="frame" x="112" y="184" width="169" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -82,9 +96,11 @@
                     <navigationItem key="navigationItem" id="IXp-ks-ild"/>
                     <connections>
                         <outlet property="genderLbl" destination="iWo-Ph-1ct" id="LrK-fj-Fea"/>
+                        <outlet property="hairColorLbl" destination="sXj-ae-2Fj" id="pH2-5F-gh0"/>
                         <outlet property="heightLbl" destination="ibn-V6-487" id="Z8J-PB-i3m"/>
                         <outlet property="massLbl" destination="4K1-y7-Aaf" id="MxD-XM-kGY"/>
                         <outlet property="nameLbl" destination="DMZ-e6-azX" id="sxn-Ig-HCB"/>
+                        <outlet property="skinColorLbl" destination="Iln-lU-BFG" id="BFe-dh-gs8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JNj-V5-ERA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

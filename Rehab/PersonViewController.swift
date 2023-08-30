@@ -12,8 +12,11 @@ class PersonViewController: UIViewController {
     @IBOutlet weak var heightLbl: UILabel!
     @IBOutlet weak var massLbl: UILabel!
     @IBOutlet weak var genderLbl: UILabel!
+    @IBOutlet weak var skinColorLbl: UILabel!
+    @IBOutlet weak var hairColorLbl: UILabel!
     
-    var personDetailed: Person = Person(name: "", height: "", mass: "", gender: "")
+    
+    var personDetailed: Person = Person(name: "", height: "", mass: "", gender: "", hairColor: "", skinColor: "")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +30,8 @@ class PersonViewController: UIViewController {
         heightLbl.text = "Height: \(personDetailed.height)"
         massLbl.text = "Mass: \(personDetailed.mass)"
         genderLbl.text = "Gender: \(personDetailed.gender)"
+        skinColorLbl.text = "Skin color: \(personDetailed.skinColor)"
+        hairColorLbl.text = "Hair color: \(personDetailed.hairColor)"
     }
 
 }
