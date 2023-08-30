@@ -20,6 +20,6 @@ struct Person: Codable, Hashable {
     let skinColor: String
     
     private enum CodingKeys : String, CodingKey {
-            case name, height,mass , gender, hairColor = "hair_color", slinColor = "skin_color"
+            case name, height,mass , gender, hairColor = "hair_color", skinColor = "skin_color"
         }
 }
