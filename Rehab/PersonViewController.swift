@@ -45,13 +45,18 @@ class PersonViewController: UIViewController {
                     switch response{
                     case .success(let film):
                         self.films.append(film.title)
+                        print(film.title)
                     case.failure(let error):
                         print(error)
                     }
                 }
+                
+                for i in films {
+                    filmsString.append(i)
+                }
+                
+                filmsLbl.text = filmsString
             }
-            
-            filmsLbl.text = filmsString
         }
     }
 
