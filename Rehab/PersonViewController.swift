@@ -52,14 +52,17 @@ class PersonViewController: UIViewController {
     func fetchingFilms() {
         if let personDetailed = personDetailed {
             for film in personDetailed.films {
-                networkManager.getFilms(urlString: film) { response in
-                    switch response{
-                    case .success(let film):
-                        self.films.append(film.title)
-                        print(film.title)
-                    case.failure(let error):
-                        print(error)
+                DispatchQueue.main.async {
+                    self.networkManager.getFilms(urlString: film) { response in
+                        switch response{
+                        case .success(let film):
+                            self.films.append(film.title)
+                            print(film.title)
+                        case.failure(let error):
+                            print(error)
+                        }
                     }
+                    self.setupUI()
                 }
             }
         }
