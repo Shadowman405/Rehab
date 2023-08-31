@@ -16,6 +16,7 @@
 		BF7B6CC42A9BC665006E3B57 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7B6CC32A9BC665006E3B57 /* NetworkManager.swift */; };
 		BF7B6CC62A9BF1A9006E3B57 /* PersonsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7B6CC52A9BF1A9006E3B57 /* PersonsTVC.swift */; };
 		BF7B6CC82A9D30CD006E3B57 /* PersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7B6CC72A9D30CD006E3B57 /* PersonViewController.swift */; };
+		BF7B6CCA2AA1165C006E3B57 /* Films.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7B6CC92AA1165C006E3B57 /* Films.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		BF7B6CC32A9BC665006E3B57 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		BF7B6CC52A9BF1A9006E3B57 /* PersonsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsTVC.swift; sourceTree = "<group>"; };
 		BF7B6CC72A9D30CD006E3B57 /* PersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewController.swift; sourceTree = "<group>"; };
+		BF7B6CC92AA1165C006E3B57 /* Films.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Films.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				BF7B6CC32A9BC665006E3B57 /* NetworkManager.swift */,
+				BF7B6CC92AA1165C006E3B57 /* Films.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 				BF7B6CAB2A9BC14E006E3B57 /* AppDelegate.swift in Sources */,
 				BF7B6CC82A9D30CD006E3B57 /* PersonViewController.swift in Sources */,
 				BF7B6CC42A9BC665006E3B57 /* NetworkManager.swift in Sources */,
+				BF7B6CCA2AA1165C006E3B57 /* Films.swift in Sources */,
 				BF7B6CC12A9BC45E006E3B57 /* Person.swift in Sources */,
 				BF7B6CC62A9BF1A9006E3B57 /* PersonsTVC.swift in Sources */,
 				BF7B6CAD2A9BC14E006E3B57 /* SceneDelegate.swift in Sources */,
