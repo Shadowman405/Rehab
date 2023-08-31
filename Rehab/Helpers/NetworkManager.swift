@@ -11,7 +11,7 @@ import UIKit
 class NetworkManager {
     static let shared = NetworkManager()
     
-    var mockPersonArray = [Person(name: "Loading...", height: "", mass: "", gender: "", hairColor: "", skinColor: "")]
+    var mockPersonArray = [Person(name: "Loading...", height: "", mass: "", gender: "", hairColor: "", skinColor: "", films: [])]
     
     private init() {}
     
