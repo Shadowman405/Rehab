@@ -33,4 +33,20 @@ class NetworkManager {
             }
         }.resume()
     }
+    
+    func getFilms(urlString: String, completion: @escaping (Result<Film, Error>) -> Void) {
+        guard let url = URL(string: urlString)
+        else {return}
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            if let data = data {
+                do {
+                    let persons = try JSONDecoder().decode(Film.self, from: data)
+                    completion(.success(persons))
+                }
+                catch {
+                    completion(.failure(error.localizedDescription as! Error))
+                }
+            }
+        }.resume()
+    }
 }
