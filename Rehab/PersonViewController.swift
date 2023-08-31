@@ -18,6 +18,8 @@ class PersonViewController: UIViewController {
     
     
     var personDetailed: Person?
+    private var films: [String] = []
+    var networkManager = NetworkManager.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +29,7 @@ class PersonViewController: UIViewController {
     }
     
     func setupUI(){
+        
         var filmsString = ""
         
         if let personDetailed = personDetailed {
@@ -38,7 +41,14 @@ class PersonViewController: UIViewController {
             hairColorLbl.text = "Hair color: " + personDetailed.hairColor.capitalized
             
             for film in personDetailed.films {
-                filmsString.append(film + "\n")
+                networkManager.getFilms(urlString: film) { response in
+                    switch response{
+                    case .success(let film):
+                        self.films.append(film.title)
+                    case.failure(let error):
+                        print(error)
+                    }
+                }
             }
             
             filmsLbl.text = filmsString
