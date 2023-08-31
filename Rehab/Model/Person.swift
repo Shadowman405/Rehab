@@ -19,8 +19,9 @@ struct Person: Codable, Hashable {
     let hairColor: String
     let skinColor: String
     let films: [String]
+    let vehicles: [String]
     
     private enum CodingKeys : String, CodingKey {
-            case name, height,mass , gender, hairColor = "hair_color", skinColor = "skin_color", films
+            case name, height,mass , gender, hairColor = "hair_color", skinColor = "skin_color", films, vehicles
         }
 }
