@@ -25,7 +25,8 @@ class PersonViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        setupUI()
+        //setupUI()
+        fetchingFilms()
     }
     
     func setupUI(){
@@ -40,6 +41,16 @@ class PersonViewController: UIViewController {
             skinColorLbl.text = "Skin color: " + personDetailed.skinColor.capitalized
             hairColorLbl.text = "Hair color: " + personDetailed.hairColor.capitalized
             
+            for i in films {
+                filmsString.append(i)
+            }
+            
+            filmsLbl.text = filmsString
+        }
+    }
+    
+    func fetchingFilms() {
+        if let personDetailed = personDetailed {
             for film in personDetailed.films {
                 networkManager.getFilms(urlString: film) { response in
                     switch response{
@@ -50,14 +61,11 @@ class PersonViewController: UIViewController {
                         print(error)
                     }
                 }
-                
-                for i in films {
-                    filmsString.append(i)
-                }
-                
-                filmsLbl.text = filmsString
             }
         }
+        
+        setupUI()
     }
-
+    
+    
 }
