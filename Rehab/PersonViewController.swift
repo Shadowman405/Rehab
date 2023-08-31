@@ -14,6 +14,7 @@ class PersonViewController: UIViewController {
     @IBOutlet weak var genderLbl: UILabel!
     @IBOutlet weak var skinColorLbl: UILabel!
     @IBOutlet weak var hairColorLbl: UILabel!
+    @IBOutlet weak var filmsLbl: UILabel!
     
     
     var personDetailed: Person?
@@ -26,6 +27,8 @@ class PersonViewController: UIViewController {
     }
     
     func setupUI(){
+        var filmsString = ""
+        
         if let personDetailed = personDetailed {
             nameLbl.text = "Name: \(personDetailed.name)"
             heightLbl.text = "Height: \(personDetailed.height)"
@@ -33,6 +36,12 @@ class PersonViewController: UIViewController {
             genderLbl.text = "Gender: " + personDetailed.gender.capitalized
             skinColorLbl.text = "Skin color: " + personDetailed.skinColor.capitalized
             hairColorLbl.text = "Hair color: " + personDetailed.hairColor.capitalized
+            
+            for film in personDetailed.films {
+                filmsString.append(film + "\n")
+            }
+            
+            filmsLbl.text = filmsString
         }
     }
 
