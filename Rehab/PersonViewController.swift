@@ -52,7 +52,6 @@ class PersonViewController: UIViewController {
     func fetchingFilms() {
         if let personDetailed = personDetailed {
             for film in personDetailed.films {
-                DispatchQueue.main.async {
                     self.networkManager.getFilms(urlString: film) { response in
                         switch response{
                         case .success(let film):
@@ -61,12 +60,9 @@ class PersonViewController: UIViewController {
                         case.failure(let error):
                             print(error)
                         }
-                    }
-                    self.setupUI()
                 }
             }
         }
-        
         setupUI()
     }
     
